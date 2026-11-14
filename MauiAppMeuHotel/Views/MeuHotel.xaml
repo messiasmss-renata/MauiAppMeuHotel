@@ -6,25 +6,14 @@
 
     <ContentPage.Resources>
         <Style TargetType="Label">
-            <Setter Property="VerticalTextAlignment" Value="Center"/>
-            
+               <Setter Property="VerticalTextAlignment" Value="Center"/>
         </Style>
     
     </ContentPage.Resources>
-
-
-    <VerticalStackLayout Padding="10"
-                             VerticalOptions="Center" 
-                             BackgroundColor="Lavender">
-
-        <Button Text="Sobre"
-                        HorizontalOptions="End"
-                        BackgroundColor="Transparent"
-                        TextColor="{StaticResource Primary}"
-                        FontAttributes="Bold"
-                        Clicked="OnSobreClicked"/>
-
-
+            
+        <VerticalStackLayout Padding="10"
+                             VerticalOptions="Center"> 
+        
         <Label Text="Calculo da Diária" 
                HorizontalTextAlignment="Center"
                TextColor="{StaticResource Primary}"
@@ -32,7 +21,7 @@
                Margin="0, 50, 0, 30 "/> 
 
         <Border StrokeShape="RoundRectangle 10"
-                BackgroundColor="{StaticResource Gray100}">
+                BackgroundColor="{StaticResource Gray300}">
             
             <VerticalStackLayout Padding="10">
 
@@ -40,31 +29,23 @@
                       RowDefinitions="Auto, Auto">
 
                     <Label Grid.Row="0" Grid.Column="0" Text="Adultos:"/>
-                    <Label Grid.Row="0" Grid.Column="1" 
-                           Text="{Binding Value}"
-                           BindingContext="{x:Reference stp_adulto}"/>
-                    <Stepper x:Name="stp_adulto"
-                             Grid.Row="0" Grid.Column="2" 
-                             Minimum="1" Maximum="6"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="0"/>
+                    <Stepper Grid.Row="0" Grid.Column="2"/>
 
                     <Label Grid.Row="1" Grid.Column="0" Text="Crianças:" />
-                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding Value}"
-                           BindingContext="{x:Reference stp_crianca}"/>
-                    <Stepper x:Name="stp_crianca" 
-                            Grid.Row="1" Grid.Column="2"
-                             Minimum="0"    Maximum="4"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="0" />
+                    <Stepper Grid.Row="1" Grid.Column="2" />
                 </Grid>
                 
                 <Label Text="Selecione sua acomodação: " 
                        HorizontalTextAlignment="Center" 
                        Margin="0, 20, 0, 5 "/>
 
-                <Picker x:Name="pck_quarto" 
-                        ItemDisplayBinding="{Binding Nome}"/>
+                <Picker/>
 
 
                 <Border StrokeShape="RoundRectangle 10"
-                        BackgroundColor="{StaticResource PrimaryDark}"
+                        BackgroundColor="{StaticResource Gray100}"
                         Margin="10">
 
                     <Grid RowDefinitions="Auto, Auto"
@@ -73,21 +54,18 @@
                           Padding="10"> 
                         
                         <Label Grid.Row="0" Grid.Column="0" Text="Data check-in:" />
-                        <DatePicker x:Name="dtpck_checkin" Grid.Row="0" Grid.Column="1"
-                                    DateSelected="dtpck_checkin_DateSelected"/>
+                        <DatePicker  Grid.Row="0" Grid.Column="1"/>
 
 
 
                         <Label Grid.Row="1" Grid.Column="0" Text="Data check-out:" />
-                        <DatePicker x:Name="dtpck_checkout" 
-                                    Grid.Row="1" Grid.Column="1"/>
+                        <DatePicker  Grid.Row="1" Grid.Column="1"/>
                         
                     </Grid>
 
                 </Border>
 
-                <Button Text="Calcular" 
-                        Clicked="CalcularContratação_Clicked"/>
+                <Button Text="Calcular" />
 
 
             </VerticalStackLayout>

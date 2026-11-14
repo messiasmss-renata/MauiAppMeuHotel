@@ -71,9 +71,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\HospedagemContratadaMeuHotel.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="Views\MeuHotel.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -6,9 +6,4 @@ public partial class SobreMeuHotel : ContentPage
 	{
 		InitializeComponent();
 	}
-
-	private async void OnVoltarClicked(object sender, EventArgs e)
-	{
-		await Shell.Current.GoToAsync("..");
-	}
 }

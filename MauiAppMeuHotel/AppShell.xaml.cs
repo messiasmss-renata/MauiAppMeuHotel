@@ -1,15 +1,10 @@
-﻿using MauiAppMeuHotel.Views;
-
-namespace MauiAppMeuHotel;
-
-public partial class AppShell : Shell
+﻿namespace MauiAppMeuHotel
 {
-    public AppShell()
+    public partial class AppShell : Shell
     {
-        InitializeComponent();
-
-        Routing.RegisterRoute(nameof(SobreMeuHotel), typeof(SobreMeuHotel));
-
-        Routing.RegisterRoute(nameof(HospedagemContratadaMeuHotel), typeof(Views.HospedagemContratadaMeuHotel));
+        public AppShell()
+        {
+            InitializeComponent();
+        }
     }
 }
